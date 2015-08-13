@@ -316,7 +316,7 @@ bool CSymbolEngineRaisers::EvaluateSymbol(const char *name, double *result, bool
 	else if (memcmp(name, "raischair", 9) == 0 && strlen(name) == 9) {
 		*result = raischair();
 	}else if (memcmp(name, "firstraiser_chair", 17) == 0) {
-		*result = _firstraiser_chair;
+		*result = firstraiser_chair();
 	}	else if (memcmp(name, "raisbits", 8)==0 && strlen(name)==9) {
     RETURN_UNDEFINED_VALUE_IF_NOT_MY_TURN
 		*result = raisbits(name[8]-'0');
