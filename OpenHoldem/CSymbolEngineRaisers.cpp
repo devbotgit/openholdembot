@@ -166,10 +166,10 @@ void CSymbolEngineRaisers::CalculateRaisers() {
 		int new_raisbits = _raisbits[BETROUND] | k_exponents[chair];
 		_raisbits[BETROUND] = new_raisbits;
 		assert(chair != USER_CHAIR);
-		++_nopponentstruelyraising;
-		if (_firstraiser_chair == kUndefined && _nopponentstruelyraising == 1){
+			if (_firstraiser_chair == kUndefined ){
 			_firstraiser_chair = chair;
 		}
+		++_nopponentstruelyraising;
 	}
 	AssertRange(_raischair, kUndefined, kLastChair);
   _lastraised[BETROUND] = _raischair;
