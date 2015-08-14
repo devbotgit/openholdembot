@@ -1,5 +1,5 @@
 
-14/08/2015
+sinc 14/08/2015
 ==================
 - move symbol firstraiser_chair to CSymbolEngineRaisers::CalculateRaisers() 
 - delete CSymbolEngineChairs::CalculateFirstRaiserChair() 
