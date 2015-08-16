@@ -5,8 +5,15 @@ tmp branch devbot:
 - delete CSymbolEngineChairs::CalculateFirstRaiserChair() 
 - update CSymbolEnginePokerTracker.cpp 
 
-NOTE: should check betposition of firstraiser_chair at flop/turn/river stage to avoid wrong
-nopponentstruelyraising and firstraiser_chair ?!
+NOTE update : betposition will solve nothing..
+nopponentstruelyraising , fisrtraiser_chair ,raiserchair , and possible symbols associated
+are actually wrong also due to a design pb (a better is simply not a raiser), those symbols are true
+at flop turn river because didact() not considering those stage , so any bet will be higher than 0  ..
+check this will not solve pb because we can have raisers even if you didn't act and user() bet-> 0 ;
+a solution could be to check bet of chair-1 but we are going to other pb ..
+Related design pb , a better isnot a raiser .
+
+it seems a bigger refactoring that i thought ..
 
 
 v7.7.7 2015-08-11
